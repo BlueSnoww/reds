@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reds</title>
+
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <link rel="stylesheet" href="{% static 'js/base.js' %}">
+  {% block css %} {% endblock %}
+
+  
+  <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+   <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  
+  
+</head>
+<body>
+  
+  <nav class="main-nav">   
+  <img class="logo" src="https://i.pinimg.com/originals/b2/14/86/b21486ecf8ff1a1df354e00750da3ac7.jpg">
+
+    <!-- Navigation -->
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">Home</a>
+    <a href="#">News</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">&#9776; Open</button>
+  </div>   
+   </nav> 
+  
+      <!-- Navigation -->
+   <nav class="main-navbar">
+     <ul>
+       <li>
+          <a href="#">Home</a>
+       </li>
+       <li>
+         <a href="#">News</a>
+       </li>
+       <li>
+          <a href="#">Contact</a>
+       </li>
+     </ul>
+   </nav> 
+
+   <form class="form-inline my-2 my-lg-0" action='/search/'>
+      <input class="form-control mr-sm-2" type="search" name="q" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+
+      {% if messages %}
+        {% for message in messages %}
+          <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+          </div>
+        {% endfor %}  
+      {% endif %}    
+
+
+{% block content %}
+{% endblock %}
+  
+  
+     
+     <!-- Footer -->
+   <hr>
+ <footer class="foot">
+ <div class="box box-a">      
+  <h4> CONTACT</h4>
+    <p>redshairdressing99@gmail.com <p>
+    <a href="tel:+607-2221318">+607-2221318</a> <br>
+     <a href="tel:+6017-7050269">+6017-7050269</a>
+       </div>
+
+ <div class="box">            
+  <h4> Location </h4>
+    <p> LOT J4-10, LEVEL 4, CITY SQUARE, JALAN WONG AH FOOK, 80000, JOHOR BAHRU. </p>
+  </div>
+  
+   <div class="box boxc">          
+  <h4> SNS </h4>
+    <a href="https://www.facebook.com/RedsHairdressingCitySquare" class="fa fa-facebook"></a>
+    <a href="https://www.instagram.com/reds_hairdressing/" class="fa fa-instagram"></a>
+    <a href="https://api.whatsapp.com/send?phone=60177050269" class="fa fa-whatsapp"></a>
+       </div>
+       
+     </footer>             
+    
+ </div>
+  
+  
+   <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+</body>
+</html>

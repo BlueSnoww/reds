@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block css %}
+  <!-- home.html css -->
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="wrapper">
+
+    <img class="bodyimg" src="{% static 'images/reds5.PNG' %}"> 
+    <p class="body2"> HAIR IS AN IMPORTANT ASPECT OF YOUR PERSONALITY & SHOULD BE WELL TAKEN CARE OF.
+HEALTHY HAIR, ACCOMPANIED WITH A GOOD HAIRCUT
+AND THE RIGHT HAIRSTYLE CAN ENHANCE YOUR FACIAL FEATURES,
+GIVING YOUR CONFIDENCE A BOOST. </p>
+    
+    <h1 class="body3"> ABOUT REDS HAIRDRESSING </h1>
+
+    <h2 class="account-heading">{{ user.name }}</h2>
+    <a href="{% url 'guest_login' %}" class="btn btn-primary btn-xl rounded-pill mt-5">ゲストログイン</a>
+
+    <div class="body4">
+    <h2> About Reds </h2>
+    <p> Established in 2004, the <strong>REDS</strong> brand has earned itself the name as the to-go-to hairdressing brand, given it’s reputation for the past three decades as Official Hair Sponsor for notable events. </p>
+    </div>
+
+    <div class="body5">
+    <u> Our Values </u>
+    <p> At REDS, we seek to understand what you need to Look Good, Feel Good. We want you to champion your world with a refreshed appearance. Our stylists are familiar with the newest fashions, trends and techniques, and will be there to guide you in every step of the way to find the perfect cut and style for you. You can count on our passionate team of PRO Stylists & Technicians to tailor each hairstyle to suit your features, personality and lifestyle. </p>
+  </div>
+
+
+ </div>   
+  
+{% endblock content %}  

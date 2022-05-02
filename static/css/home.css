@@ -1,0 +1,32 @@
+.wrapper {
+  display:flex;
+  flex-direction: column;
+}
+
+.bodyimg {
+  width: 100%;
+  height: 100%;
+}
+
+.body2 {
+  text-align: center;
+  padding: 10px;
+}
+
+.body3 {
+  text-align: center;
+  padding: 40px;
+  background-color: #32353A;
+}
+
+.body4 {
+  text-align: center;
+  padding: 10px;
+}
+
+.body5 {
+  text-align: center;
+  padding: 10px;
+  background-color: #32353A;
+}
+
